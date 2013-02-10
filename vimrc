@@ -4,7 +4,6 @@ let mapleader = "," " use , as shortcut char for custom bindings
 set ignorecase
 set smartcase " case insensitive search if all chars are lower case
 set scrolloff=3 " keep 3 rows of context above and below cursor
-set cmdheight=1 " make the command area just one line high
 
 call pathogen#infect()
 
@@ -153,3 +152,5 @@ set viminfo=!,%,'20,/100,:100,s100,n~/.viminfo " options for .viminfo
 " Go has its own style ...
 autocmd FileType go setlocal noet ci pi sts=8 sw=8 ts=8
 set rtp+=$GOROOT/misc/vim
+
+set cmdheight=1 " make the command area just one line high
