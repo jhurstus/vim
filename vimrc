@@ -125,11 +125,10 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 au BufRead,BufNewFile *.sass set filetype=sass
 au! Syntax newlang source ~/.vim/syntax/sass.vim
 
-" FuzzyFinder and FuzzyFinderTextmate
-let g:fuzzy_ignore = "*.log"
-let g:fuzzy_matching_limit = 70
-map <leader>t :FuzzyFinderTextMate<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
+" Command T
+let g:CommandTMaxFiles=10000
+let g:CommandTMatchWindowAtTop=1
+set wildignore+=*.o,*.obj,.git
 
 " Scratch buffer
 function! ToggleScratch()
