@@ -120,10 +120,6 @@ runtime macros/matchit.vim " match more things (like if/then/endif)
 " jump to the last known position in a file
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
-" HAML/Sass language definition
-au BufRead,BufNewFile *.sass set filetype=sass
-au! Syntax newlang source ~/.vim/syntax/sass.vim
-
 " Command T
 let g:CommandTMaxFiles=10000
 let g:CommandTMatchWindowAtTop=1
@@ -143,10 +139,6 @@ map <leader>s :call ToggleScratch()<CR>
 nnoremap ' `
 nnoremap ` '
 
-" Haskell
-au Bufenter *.hs compiler ghc
-let g:haddock_browser = "/usr/bin/google-chrome"
-
 set viminfo=!,%,'20,/100,:100,s100,n~/.viminfo " options for .viminfo
 
 " Go has its own style ...
@@ -154,3 +146,5 @@ autocmd FileType go setlocal noet ci pi sts=8 sw=8 ts=8
 set rtp+=$GOROOT/misc/vim
 
 set cmdheight=1 " make the command area just one line high
+
+" Also look at: matchit, snipmate, surround, indentanything, repeat.
