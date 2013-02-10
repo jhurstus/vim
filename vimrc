@@ -45,7 +45,6 @@ set matchtime=1 " show matching brackets quicker than default
 set autoread " automatically read file changed outside of Vim
 set autowrite " automatically save before commands like :next and :make
 set splitbelow " open new split windows below the current one
-set winminheight=0 " Allow only the status bar of a window to be shown
 set noequalalways " do not resize windows on split/close
 set showcmd " show partial command in status line
 set encoding=utf-8
