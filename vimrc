@@ -127,7 +127,7 @@ au! Syntax newlang source ~/.vim/syntax/sass.vim
 " Command T
 let g:CommandTMaxFiles=10000
 let g:CommandTMatchWindowAtTop=1
-set wildignore+=*.o,*.obj,.git
+set wildignore+=*.o,*.obj,.git,*.hi
 
 " Scratch buffer
 function! ToggleScratch()
