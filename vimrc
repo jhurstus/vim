@@ -19,12 +19,14 @@ set formatoptions+=r " auto-format comments while typing
 set formatoptions+=c " word-wrap comments
 set formatoptions-=t " don't word wrap most text
 
-" Match trailing whitespace and long columns. This must appear before the first
-" colorscheme command.
+" Match trailing whitespace and long columns.
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/ " highlight trailing whitespace
-match ExtraWhitespace '\%>80v.\+'
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+match ExtraWhitespace /\s\+$/
+set colorcolumn=+1
 
 syntax on " use syntax color highlighting
 set background=dark
