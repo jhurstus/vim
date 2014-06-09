@@ -30,8 +30,10 @@ set colorcolumn=+1
 
 syntax on " use syntax color highlighting
 set background=dark
-colorscheme solarized
+let g:solarized_termcolors=16
+let g:solarized_termtrans = 1
 set t_Co=16
+colorscheme solarized
 
 set mouse=a " enable VIM mouse
 set ttyfast " smoother display on fast network connections
@@ -144,6 +146,8 @@ set viminfo=!,%,'20,/100,:100,s100,n~/.viminfo " options for .viminfo
 " Go has its own style ...
 autocmd FileType go setlocal noet ci pi sts=8 sw=8 ts=8
 set rtp+=$GOROOT/misc/vim
+" Run gofmt before writing go buffers.
+autocmd BufWritePre *.go Fmt
 
 set cmdheight=1 " make the command area just one line high
 
