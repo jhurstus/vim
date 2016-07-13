@@ -141,6 +141,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 " CtrlP
 nnoremap <silent><leader>t :CtrlP<cr>
 nnoremap <silent><leader>b :CtrlPBuffer<cr>
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20' 
 
 " Scratch buffer
 function! ToggleScratch()
